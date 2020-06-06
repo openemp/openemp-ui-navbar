@@ -22,7 +22,7 @@ export default function MobileSection({ mobileMenuId, handleMobileMenuOpen }) {
         onClick={handleMobileMenuOpen}
         color="inherit"
       >
-        <Icon class="material-icons">more</Icon>
+        <Icon>more</Icon>
       </IconButton>
     </div>
   );

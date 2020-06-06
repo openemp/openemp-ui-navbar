@@ -28,7 +28,7 @@ export default function MobileMenu({
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="secondary">
-            <Icon class="material-icons">mail</Icon>
+            <Icon>mail</Icon>
           </Badge>
         </IconButton>
         <p>Messages</p>
