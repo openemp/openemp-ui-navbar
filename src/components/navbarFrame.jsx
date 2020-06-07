@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles, AppBar, CssBaseline, Toolbar } from '@openemp-mf/styleguide';
 
 const useStyles = makeStyles((theme) => ({
@@ -24,3 +25,7 @@ export default function Navbar(props) {
     </>
   );
 }
+
+Navbar.propTypes = {
+  children: PropTypes.element.isRequired,
+};

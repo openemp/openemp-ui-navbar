@@ -6,16 +6,16 @@ import Root from './root.component';
 
 // eslint-disable-next-line no-undef
 
-// function domElementGetter() {
-//   let el = document.getElementById('root');
-//   if (!el) {
-//     el = document.createElement('div');
-//     el.id = 'root';
-//     el.className = process.env.PROJECT_NAME;
-//     document.body.appendChild(el);
-//   }
-//   return el;
-// }
+function domElementGetter() {
+  let el = document.getElementById('root');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'root';
+    el.className = process.env.PROJECT_NAME;
+    document.body.appendChild(el);
+  }
+  return el;
+}
 
 const lifecycles = singleSpaReact({
   React,
@@ -24,7 +24,7 @@ const lifecycles = singleSpaReact({
   errorBoundary() {
     return React.createElement('div', null, 'error');
   },
-  // domElementGetter,
+  domElementGetter,
 });
 
 export const { bootstrap, mount, unmount } = lifecycles;

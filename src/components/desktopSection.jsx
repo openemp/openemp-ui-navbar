@@ -17,12 +17,12 @@ export default function DesktopSection({ menuId, handleProfileMenuOpen }) {
   return (
     <div className={classes.sectionDesktop}>
       <IconButton aria-label="show 4 new mails" color="inherit">
-        <Badge badgeContent={4} color="secondary">
+        <Badge color="secondary">
           <Icon>mail</Icon>
         </Badge>
       </IconButton>
       <IconButton aria-label="show 17 new notifications" color="inherit">
-        <Badge badgeContent={17} color="secondary">
+        <Badge color="secondary">
           <Icon>notifications</Icon>
         </Badge>
       </IconButton>

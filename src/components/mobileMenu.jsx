@@ -27,7 +27,7 @@ export default function MobileMenu({
     >
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
+          <Badge color="secondary">
             <Icon>mail</Icon>
           </Badge>
         </IconButton>
@@ -35,7 +35,7 @@ export default function MobileMenu({
       </MenuItem>
       <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
+          <Badge color="secondary">
             <Icon>notifications</Icon>
           </Badge>
         </IconButton>
