@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Navbar(props) {
+export default function NavbarFrame(props) {
   const { children } = props;
   const classes = useStyles();
 
@@ -26,6 +26,6 @@ export default function Navbar(props) {
   );
 }
 
-Navbar.propTypes = {
-  children: PropTypes.element.isRequired,
+NavbarFrame.propTypes = {
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
