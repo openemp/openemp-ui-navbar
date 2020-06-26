@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { makeStyles, IconButton, Badge, Icon } from '@openemp-mf/styleguide';
+import { makeStyles, IconButton, Badge, Icon, useTheme } from '@openemp-mf/styleguide';
 
 const useStyles = makeStyles((theme) => ({
   sectionDesktop: {
@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function DesktopSection({ menuId, handleProfileMenuOpen }) {
   const classes = useStyles();
+  const theme = useTheme();
 
   return (
     <div className={classes.sectionDesktop}>
@@ -27,7 +28,7 @@ export default function DesktopSection({ menuId, handleProfileMenuOpen }) {
         </Badge>
       </IconButton>
       <IconButton
-        edge="end"
+        edge={theme.direction === 'rtl' ? 'start' : 'end'}
         aria-label="account of current user"
         aria-controls={menuId}
         aria-haspopup="true"
