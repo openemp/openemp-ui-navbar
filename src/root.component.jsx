@@ -1,27 +1,18 @@
-import React from 'react';
-import ParcelComponent from 'single-spa-react/parcel';
-import { mountRootParcel } from 'single-spa';
-import { createJss, rtl, jssPreset, StylesProvider, useTheme } from '@openemp-mf/styleguide';
+import React, { Suspense } from 'react';
 
 import Navbar from 'components/navbar';
-import { withAuth } from '@openemp-mf/login';
 
-// eslint-disable-next-line no-undef
-const remoteImport = async (url) => System.import(url);
+// eslint-disable-next-line no-unused-vars
+import i18n from 'assets/i18n';
 
-const jss = createJss({ plugins: [...jssPreset().plugins, rtl()] });
-
-const Root = () => {
-  const theme = useTheme();
-  // theme.direction = 'rtl';
-
-  console.log('-----', theme);
+const Root = ({ StylesProvider, jss }) => {
   return (
-    <StylesProvider jss={jss}>
-      <Navbar />
-      <ParcelComponent config={remoteImport('@openemp-mf/drawer')} mountParcel={mountRootParcel} />
-    </StylesProvider>
+    <Suspense fallback={null}>
+      <StylesProvider jss={jss}>
+        <Navbar />
+      </StylesProvider>
+    </Suspense>
   );
 };
 
-export default withAuth(Root);
+export default Root;
