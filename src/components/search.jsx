@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { InputBase, Icon, makeStyles, fade } from '@openemp-mf/styleguide';
 
 const useStyles = makeStyles((theme) => ({
@@ -43,13 +44,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Search() {
   const classes = useStyles();
+  const { t } = useTranslation();
   return (
     <div className={classes.search}>
       <div className={classes.searchIcon}>
         <Icon>search</Icon>
       </div>
       <InputBase
-        placeholder="Search…"
+        placeholder={t('Search…')}
         classes={{
           root: classes.inputRoot,
           input: classes.inputInput,

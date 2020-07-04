@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { makeStyles, IconButton, Badge, Icon } from '@openemp-mf/styleguide';
+import ProfileMenu from './profileMenu';
 
 const useStyles = makeStyles((theme) => ({
   sectionDesktop: {
@@ -11,8 +12,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DesktopSection({ menuId, handleProfileMenuOpen }) {
+export default function DesktopSection() {
   const classes = useStyles();
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const isMenuOpen = Boolean(anchorEl);
+
+  const handleProfileMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <div className={classes.sectionDesktop}>
@@ -27,15 +39,15 @@ export default function DesktopSection({ menuId, handleProfileMenuOpen }) {
         </Badge>
       </IconButton>
       <IconButton
-        edge="end"
+        // edge={theme.direction === 'rtl' ? 'end' : 'start'}
         aria-label="account of current user"
-        aria-controls={menuId}
         aria-haspopup="true"
         onClick={handleProfileMenuOpen}
         color="inherit"
       >
         <Icon>account_circle</Icon>
       </IconButton>
+      <ProfileMenu open={isMenuOpen} anchorEl={anchorEl} onClose={handleMenuClose} />
     </div>
   );
 }

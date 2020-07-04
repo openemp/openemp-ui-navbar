@@ -1,25 +1,17 @@
-import React from 'react';
-import { Redirect } from '@reach/router';
-import ParcelComponent from 'single-spa-react/parcel';
-import { mountRootParcel } from 'single-spa';
+import React, { Suspense } from 'react';
 
 import Navbar from 'components/navbar';
 
-// eslint-disable-next-line no-undef
-const remoteImport = async (url) => System.import(url);
+// eslint-disable-next-line no-unused-vars
+import i18n from 'assets/i18n';
 
-const isAuthenticate = true;
-
-const Root = () => {
-  return isAuthenticate ? (
-    <>
-      <Navbar />
-      <ParcelComponent config={remoteImport('@openemp-mf/drawer')} mountParcel={mountRootParcel} />
-    </>
-  ) : (
-    <>
-      <Redirect to="/login" noThrow />
-    </>
+const Root = ({ StylesProvider, jss }) => {
+  return (
+    <Suspense fallback={null}>
+      <StylesProvider jss={jss}>
+        <Navbar />
+      </StylesProvider>
+    </Suspense>
   );
 };
 

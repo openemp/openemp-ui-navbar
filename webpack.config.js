@@ -51,6 +51,18 @@ module.exports = (webpackConfigEnv = {}) => {
             },
           ],
         },
+        {
+          type: 'javascript/auto',
+          test: /\.i18n\.json$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: './public/i18n/[name].[ext]',
+              },
+            },
+          ],
+        },
       ],
     },
     devtool: 'source-map',
