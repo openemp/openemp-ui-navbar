@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { IconButton, Badge, MenuItem, Menu, Icon } from '@openemp-mf/styleguide';
+import { IconButton, Badge, MenuItem, Menu, Icon } from '@openemp/styleguide';
 
 export default function MobileMenu({
   mobileMoreAnchorEl,

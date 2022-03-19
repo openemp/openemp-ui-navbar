@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { MenuItem, Typography, Menu } from '@openemp-mf/styleguide';
+import { MenuItem, Typography, Menu } from '@openemp/styleguide';
 
 export default function ProfileMenu({ anchorEl, open, onClose }) {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { InputBase, Icon, makeStyles, fade } from '@openemp-mf/styleguide';
+import { InputBase, Icon, makeStyles, fade } from '@openemp/styleguide';
 
 const useStyles = makeStyles((theme) => ({
   search: {

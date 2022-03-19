@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconButton, Icon } from '@openemp-mf/styleguide';
+import { IconButton, Icon } from '@openemp/styleguide';
 
 export default function DrawerControl() {
   const handleDrawerOpen = () => {

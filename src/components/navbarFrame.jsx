@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles, AppBar, CssBaseline, Toolbar } from '@openemp-mf/styleguide';
+import { makeStyles, AppBar, CssBaseline, Toolbar } from '@openemp/styleguide';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
