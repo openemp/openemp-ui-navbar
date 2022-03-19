@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { makeStyles, IconButton, Badge, Icon } from '@openemp-mf/styleguide';
+import { makeStyles, IconButton, Badge, Icon } from '@openemp/styleguide';
 import ProfileMenu from './profileMenu';
 
 const useStyles = makeStyles((theme) => ({

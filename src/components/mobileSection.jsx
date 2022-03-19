@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { makeStyles, IconButton, Icon } from '@openemp-mf/styleguide';
+import { makeStyles, IconButton, Icon } from '@openemp/styleguide';
 
 const useStyles = makeStyles((theme) => ({
   sectionMobile: {

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { makeStyles, Typography } from '@openemp-mf/styleguide';
+import { makeStyles, Typography } from '@openemp/styleguide';
 import { NavbarFrame, Search, DesktopSection, MobileSection } from 'components';
 import { DrawerControl } from 'features';
 
