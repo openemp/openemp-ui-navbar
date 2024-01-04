@@ -75,8 +75,6 @@
     "webpack": "^4.42.1",
     "webpack-bundle-analyzer": "^4.10.1",
     "webpack-cli": "^3.3.11",
-    "webpack-config-single-spa-react": "4.0.4",
-    "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
   },
   "husky": {
